@@ -1,7 +1,6 @@
 // app/routes/integration.vitest.ts
 import { describe, it, expect, vi, beforeEach } from "vitest";
 import { loader as crearLoader, action as crearAction } from "./crear";
-import { loader as editarLoader, action as editarAction } from "./editar";
 import { action as borrarAction } from "./borrar";
 
 // 🔹 Mock fetch

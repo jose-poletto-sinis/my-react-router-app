@@ -10,11 +10,11 @@ export const loader = async () => {
   return { atributos: data };
 };
 ;
-// 🔹 Celda con botón Delete
 
-import { Link, Navigate, Outlet, useLoaderData, useNavigate, useOutletContext } from "react-router";
-import React, { useState } from "react";
-// ...existing code...
+
+import { Outlet, useLoaderData, useNavigate } from "react-router";
+import { useState } from "react";
+
 
 const ActionCell = (props: GridCellProps & { onEdit: (item: any) => void }) => {
   const navigate = useNavigate();

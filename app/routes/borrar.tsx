@@ -3,7 +3,7 @@ import React, { type ReactNode } from "react";
 import { Dialog, DialogActionsBar } from "@progress/kendo-react-dialogs";
 import { Button } from "@progress/kendo-react-buttons";
 
-// 🔹 Acción que borra en el backend
+
 export async function action({ params }: { params: { id: string } }) {
   const response = await fetch(
     `https://appcms.desarrollo.dnscheck.com.ar/Atributos/DeleteAtributo/IdAtributo/${params.id}`,
@@ -17,7 +17,6 @@ export async function action({ params }: { params: { id: string } }) {
   return { resultado: "Atributo borrado correctamente" };
 }
 
-// 🔹 Componente con Dialog
 export default function DeleteAtributo() {
   const { id, nombre } = useParams<{ id: string; nombre: string }>();
   const actionData = useActionData() as {
@@ -30,7 +29,7 @@ export default function DeleteAtributo() {
 
   const close = () => navigate(-1); // vuelve a la URL anterior
 
-  // Navega hacia atrás si el borrado fue exitoso
+
   React.useEffect(() => {
     if (actionData?.resultado) {
       navigate(-1);
